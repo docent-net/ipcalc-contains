@@ -12,6 +12,8 @@ I use it inside of my [Linux desktop deployment automation](https://github.com/d
 
 # Usage
 
+![alt text](https://github.com/docent-net/ipcalc-contains/blob/main/static/docs-screenshot-usage.png?raw=true)
+
 ```bash
 $ ./ipcalc-contains 192.168.0.0/24 192.168.0.10
 CONTAINS! Network 192.168.0.0/24 contains IP 192.168.0.10
