@@ -14,7 +14,7 @@ I use it inside of my [Linux desktop deployment automation](https://github.com/d
 
 ![alt text](https://github.com/docent-net/ipcalc-contains/blob/main/static/docs-screenshot-usage.png?raw=true)
 
-![alt text](https://github.com/docent-net/ipcalc-contains/blob/main/static/docs-screenshot-usage2.png?raw=true)
+![alt text](https://github.com/docent-net/ipcalc-contains/blob/main/static/docs-screenshot-usage-2.png?raw=true)
 
 ```bash
 $ ipcalc-contains 192.168.0.0/24 192.168.0.10
