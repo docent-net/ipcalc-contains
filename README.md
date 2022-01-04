@@ -1,5 +1,5 @@
 # ipcalc-contains
-Golang micro-app, which check whether an IP address belongs to a given network
+Golang micro-app, which check whether an IP address or a network belongs to a given network.
 
 I use it as an addition to standard **ipcalc** binary distributed
 with common Linux distributions.
@@ -14,10 +14,18 @@ I use it inside of my [Linux desktop deployment automation](https://github.com/d
 
 ![alt text](https://github.com/docent-net/ipcalc-contains/blob/main/static/docs-screenshot-usage.png?raw=true)
 
+![alt text](https://github.com/docent-net/ipcalc-contains/blob/main/static/docs-screenshot-usage2.png?raw=true)
+
 ```bash
-$ ./ipcalc-contains 192.168.0.0/24 192.168.0.10
+$ ipcalc-contains 192.168.0.0/24 192.168.0.10
 CONTAINS! Network 192.168.0.0/24 contains IP 192.168.0.10
 
-$ ./ipcalc-contains 192.168.0.0/24 192.168.1.10
+$ ipcalc-contains 192.168.0.0/24 192.168.1.10
 NOPE! Network 192.168.0.0/24 DOES NOT contain 192.168.1.10
+
+$ ipcalc-contains 192.168.0.0/20 192.168.12.0/30
+CONTAINS! Network 192.168.0.0/20 contains 192.168.12.0/30
+
+$ ipcalc-contains 192.168.1.0/20 192.168.12.128/10
+NOPE! Network 192.168.1.0/20 DOES NOT contain 192.168.12.128/10
 ```
