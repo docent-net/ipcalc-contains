@@ -3,7 +3,6 @@ package subnet
 import (
 	"fmt"
 	"net"
-	"os"
 )
 
 func SubnetContains(args []string) bool {
@@ -13,7 +12,7 @@ func SubnetContains(args []string) bool {
 	_, ipv4Net, err := net.ParseCIDR(args[0])
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+		return false
 	}
 
 	ipv4Addr := net.ParseIP(args[1])
@@ -22,7 +21,7 @@ func SubnetContains(args []string) bool {
 		_, ipv4Net2, err := net.ParseCIDR(args[1])
 		if err != nil {
 			fmt.Println(string(args[1]) + " is not recognized as IPv4 address nor a network")
-			os.Exit(1)
+			return false
 		}
 		// checking if subnet contains another subnet:
 		if subnetContainsSubnet(ipv4Net, ipv4Net2) {
