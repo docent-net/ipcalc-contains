@@ -27,6 +27,11 @@ func getSubnetInfo(args []string) string {
 192.168.0.0/24) and an IP address as exact 2 arguments for
 this command, e.g: ipcalc-contains 192.168.0.0/24 192.168.100.1
 
+You can also provide two network to check, if the first contains the
+second:
+
+ipcalc-contains 192.168.0.0/20 192.168.0.0/30
+
 Run --help for details`)
 		os.Exit(1)
 	}
